@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #1c1c1c, #2e2e2e);
+        color: #fff;
+        min-height: 100vh;
+      }
+
+      .section {
+        padding: 80px 20px;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: auto;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 40px;
+        color: #f5f5f5;
+      }
+
+      .accordion {
+        background: #333;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      }
+
+      .accordion_item {
+        border-bottom: 1px solid #444;
+      }
+
+      .accordion_title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        cursor: pointer;
+        transition: background 0.3s;
+        background-color: #2a2a2a;
+      }
+
+      .accordion_title:hover {
+        background-color: #3a3a3a;
+      }
+
+      .accordion_title h3 {
+        font-size: 1.25rem;
+        color: #fefefe;
+        margin-right: 10px;
+      }
+
+      .accordion_title i {
+        font-size: 1.2rem;
+        color: #ffb347;
+        transition: transform 0.3s ease;
+      }
+
+      .accordion_title.active i {
+        transform: rotate(180deg);
+      }
+
+      .accordion_content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, padding 0.4s ease;
+        background-color: #1e1e1e;
+      }
+
+      .accordion_title.active + .accordion_content {
+        max-height: 500px;
+        padding: 20px;
+      }
+
+      .accordion_content p {
+        font-size: 1rem;
+        color: #dedede;
+        line-height: 1.6;
+      }
+      .accordion-controls {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .accordion-controls button {
+        background-color: #ffb347;
+        border: none;
+        color: #1c1c1c;
+        padding: 10px 20px;
+        margin: 0 10px;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      .accordion-controls button:hover {
+        background-color: #ffc168;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section">
+      <div class="accordion-controls">
+        <button id="expandAll">Expand All</button>
+        <button id="collapseAll">Collapse All</button>
+      </div>
+      <div class="container">
+        <h1>FAQ Accordion</h1>
+        <div class="accordion"></div>
+      </div>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>

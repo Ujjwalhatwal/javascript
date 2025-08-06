@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+   // to create element and create attribute
+   const div = document.createElement('div')
+   console.log(div);
+   // set class name : 
+   div.className = "main"
+
+   // set id name : 
+    // div.id = Math.floor(Math.random() * 10 + 1)
+   div.id = Math.round(Math.random() * 10 + 1)
+   // div.id = "myId"
+
+   // to set attribute
+   div.setAttribute("title","generate title")
+   // to add style
+   div.style.backgroundColor = "green"
+   div.style.padding = "12px"
+   div.style.color = "white"
+
+   //now main problem is div is in memory not on page , so you have to attach it to page
+
+   // div.innerText = "chai aur code" 
+   // it is not generally use because it not less optimize as it over write the text ,it first take reference the over write
+
+   // more prefered
+   const addText = document.createTextNode("chai aur code")
+   div.appendChild(addText)
+
+   // by the way both aur use it is debate able point which one is more optimize
+
+   // to travarse
+   document.body.appendChild(div)
+
+</script>
+</html>

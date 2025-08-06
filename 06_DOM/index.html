@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM learning</title>
+</head>
+<body>
+    <!-- brendan eich : founder of js , active in brave browser -->
+    <div class = "bg-black">
+        <h1 id="title" class ="heading">DOM learing on chai aur code <span style="display: none;"> ujjwal kumar</span></h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        <h2>lorem2 lorem lorem 3 4 words</h2>
+        <h2>lorem3 lorem lorem 4 5 words</h2>
+        <h2>lorem4 lorem lorem 5 6 words</h2>
+
+         <input type="password" name="" id="">
+
+         <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+         </ul>
+    </div>
+    <style>
+        body{
+            background-color: #212121;
+            color:white;
+        }
+    </style>
+</body>
+</html>
+
+<!-- 
+command to check and run in browser 
+console.log(window);
+console.log(window.document);
+console.log(document);
+console.dir(document);
+
+diagram : of document object mode =>
+window -> document -> html -> head -> title = text node
+                                   -> meta = attribute
+
+                           -> body -> div -> attribute 
+                                          -> H1 = attribute,text node
+                                          -> P = attribute,text node
+
+class here is attribute , text is text node;
+
+htmlcollection , nodecollection and array are different
+-->
+
+
+<!-- 
+// access :
+document.getElementById('idName').innerHTML = "<h1> chai code </h1>"
+
+-->

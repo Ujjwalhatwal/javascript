@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <!-- this is comment -->
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">thursday</div>
+        <div class="day">friday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    console.log(parent);
+    console.log(parent.children);
+    console.log(parent.children[1]);
+    console.log(parent.children[1].innerText);
+
+    for (let i = 0; i < parent.children.length; i++) {
+        console.log(parent.children[i].innerHTML);   
+    }
+
+    parent.children[1].style.color = "orange" 
+    console.log(parent.children[1]); // color change to orange
+    
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+    
+
+    const dayOne = document.querySelector('.day')
+    console.log(dayOne);
+    // no need to again use query selector as it increase complexity 
+    console.log(dayOne.parentElement);
+    console.log(dayOne.nextElementSibling.innerText);
+    
+    console.log("nodes : ",parent.childNodes);
+    // in this it count line break also as node , as it is a tree structure as it count both : text , attribute
+    
+    
+</script>
+</html>
+
+<!-- 
+one.html:19 div.parent
+one.html:20 HTMLCollection(5) [div.day, div.day, div.day, div.day, div.day]
+one.html:21 <div class=​"day">​tuesday​</div>​
+one.html:22 tuesday
+
+one.html:25 monday
+one.html:25 tuesday
+one.html:25 wednesday
+one.html:25 thursday
+one.html:25 friday
+
+one.html.29 <div class="day" style="color: orange;">tuesday</div> // color change to orange
+one.html:31 <div class=​"day">​monday​</div>​
+one.html:32 <div class=​"day">​friday​</div>​
+
+one.html:36 <div class=​"day">​monday​</div>​
+
+
+one.html:38 div.parent
+one.html.39 tuesday
+one.html.41 nodes :  NodeList(11)0: text1: div.day2: text3: div.day4: text5: div.day6: text7: div.day8: text9: div.day10: textlength: 11[[Prototype]]: NodeList
+
+
+-->
